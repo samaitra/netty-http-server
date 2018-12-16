@@ -210,7 +210,7 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpReque
         }
 
         // Convert to absolute path.
-        return SystemPropertyUtil.get("user.dir") + File.separator + uri;
+            return SystemPropertyUtil.get("user.dir") + File.separator + uri;
     }
 
     private static final Pattern ALLOWED_FILE_NAME = Pattern.compile("[^-\\._]?[^<>&\\\"]*");
