@@ -111,7 +111,7 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpReque
             }
         }
 
-        final RandomAccessFile raf;
+        RandomAccessFile raf;
         try {
             raf = new RandomAccessFile(file, "r");
         } catch (FileNotFoundException ignore) {
@@ -160,11 +160,11 @@ public class HttpServerHandler extends SimpleChannelInboundHandler<FullHttpReque
             @Override
             public void operationComplete(ChannelProgressiveFuture future) {
                 System.err.println(future.channel() + " Transfer complete.");
-                try {
-                    raf.close();
-                } catch (IOException e) {
-                    throw new Error(e);
-                }
+//                try {
+//                    raf.close();
+//                } catch (IOException e) {
+//                    throw new Error(e);
+//                }
             }
         });
 
